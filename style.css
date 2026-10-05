@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Inter:wght@400;500;600&display=swap');
-
 :root {
+  --font: "Avenir Next", "Avenir", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --teal: #009193;
   --teal-dark: #00504F;
   --gold: #F2B544;
@@ -19,7 +18,7 @@ body {
   margin: 0;
   background: var(--teal);
   color: var(--paper);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font);
   font-size: 1.05rem;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -47,17 +46,17 @@ header.site {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-family: 'Quicksand', sans-serif;
+  font-family: var(--font);
   font-weight: 700;
   font-size: 1.3rem;
 }
-header.site .mark { width: 1.7rem; height: 1.7rem; display: block; }
+header.site .mark { height: 1.5rem; width: auto; display: block; }
 header.site a { text-decoration: none; display: flex; align-items: center; gap: 0.6rem; color: inherit; }
 
 main { margin-top: 3rem; }
 
 h1 {
-  font-family: 'Quicksand', sans-serif;
+  font-family: var(--font);
   font-weight: 700;
   font-size: 2.6rem;
   line-height: 1.15;
@@ -100,7 +99,7 @@ p.lede {
 }
 .features .icon { font-size: 1.3rem; flex: none; }
 .features h2 {
-  font-family: 'Quicksand', sans-serif;
+  font-family: var(--font);
   font-size: 1.1rem;
   font-weight: 700;
   margin: 0 0 0.2rem;
