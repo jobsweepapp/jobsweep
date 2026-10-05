@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Inter:wght@400;500;600&display=swap');
 
 :root {
-  --teal: #0E8C83;
-  --teal-deep: #09524C;
+  --teal: #009193;
+  --teal-dark: #00504F;
   --gold: #F2B544;
   --paper: #FFFBF2;
   --ink: #15322D;
@@ -51,8 +51,8 @@ header.site {
   font-weight: 700;
   font-size: 1.3rem;
 }
-header.site .mark { font-size: 1.6rem; }
-header.site a { text-decoration: none; display: flex; align-items: center; gap: 0.6rem; }
+header.site .mark { width: 1.7rem; height: 1.7rem; display: block; }
+header.site a { text-decoration: none; display: flex; align-items: center; gap: 0.6rem; color: inherit; }
 
 main { margin-top: 3rem; }
 
@@ -120,19 +120,28 @@ footer.site {
 }
 footer.site .links { display: flex; gap: 1.5rem; }
 
-/* Inner pages (support, privacy): a calmer paper-colored reading surface */
-body.page { background: var(--paper); color: var(--ink); }
-body.page a { color: var(--teal-deep); }
-body.page header.site { color: var(--ink); }
-body.page footer.site { border-top-color: rgba(21,50,45,0.15); color: var(--ink-soft); }
-body.page h1 { color: var(--ink); }
+/* Inner pages (support, privacy): same teal canvas as Home, with the body
+   copy inside a light card — the same pattern the app itself uses for a
+   job's description text sitting on the teal screen background. */
+body.page h1 { color: var(--paper); }
+
+.card {
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 20px;
+  padding: 1.75rem 1.9rem;
+  box-shadow: 0 6px 20px rgba(0,30,30,0.18);
+}
+.card p { margin: 0 0 1.2rem; max-width: 36rem; }
+.card p:last-child { margin-bottom: 0; }
+.card a { color: var(--teal-dark); }
+.card a.mail { font-weight: 600; }
+
 .updated {
   font-size: 0.9rem;
-  color: var(--ink-soft);
-  margin: -0.5rem 0 2.2rem;
+  color: rgba(255,251,242,0.75);
+  margin: -0.5rem 0 1.8rem;
 }
-.page-body p { margin: 0 0 1.2rem; max-width: 36rem; }
-.page-body a.mail { font-weight: 600; }
 
 @media (max-width: 480px) {
   h1 { font-size: 2.1rem; }
