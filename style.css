@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --teal: #0E8C83;
+  --teal-deep: #09524C;
+  --gold: #F2B544;
+  --paper: #FFFBF2;
+  --ink: #15322D;
+  --ink-soft: #3F5D57;
+  --coral: #EF6F56;
+  --max: 720px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--teal);
+  color: var(--paper);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--paper);
+  text-decoration-color: rgba(255,255,255,0.45);
+  text-underline-offset: 3px;
+}
+a:hover { text-decoration-color: var(--paper); }
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 3rem;
+}
+
+header.site {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+header.site .mark { font-size: 1.6rem; }
+header.site a { text-decoration: none; display: flex; align-items: center; gap: 0.6rem; }
+
+main { margin-top: 3rem; }
+
+h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 2.6rem;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+  letter-spacing: -0.01em;
+}
+
+p.lede {
+  font-size: 1.2rem;
+  color: rgba(255,251,242,0.92);
+  max-width: 34rem;
+  margin: 0 0 2.5rem;
+}
+
+.cta-note {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 999px;
+  padding: 0.6rem 1.3rem;
+  font-size: 0.95rem;
+  margin-bottom: 3.5rem;
+}
+/* TODO (JBSP-167): once 3.0 is approved, replace .cta-note above with Apple's
+   official "Download on the App Store" badge, linked to the real App Store
+   listing URL. Get the badge asset from Apple's marketing resources page. */
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin: 0 0 3rem;
+  padding: 0;
+  list-style: none;
+}
+.features li {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+}
+.features .icon { font-size: 1.3rem; flex: none; }
+.features h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.2rem;
+}
+.features p { margin: 0; color: rgba(255,251,242,0.88); }
+
+footer.site {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem 2rem;
+  align-items: center;
+  font-size: 0.95rem;
+  color: rgba(255,251,242,0.8);
+}
+footer.site .links { display: flex; gap: 1.5rem; }
+
+/* Inner pages (support, privacy): a calmer paper-colored reading surface */
+body.page { background: var(--paper); color: var(--ink); }
+body.page a { color: var(--teal-deep); }
+body.page header.site { color: var(--ink); }
+body.page footer.site { border-top-color: rgba(21,50,45,0.15); color: var(--ink-soft); }
+body.page h1 { color: var(--ink); }
+.updated {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin: -0.5rem 0 2.2rem;
+}
+.page-body p { margin: 0 0 1.2rem; max-width: 36rem; }
+.page-body a.mail { font-weight: 600; }
+
+@media (max-width: 480px) {
+  h1 { font-size: 2.1rem; }
+  .wrap { padding: 3rem 1.25rem 2.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
