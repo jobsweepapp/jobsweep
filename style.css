@@ -71,6 +71,17 @@ p.lede {
   margin: 0 0 2.5rem;
 }
 
+/* App Store call to action (JBSP-531, 3.0 live Nov 4, 2026): the line, Apple's
+   official black badge (app-store-badge.svg, used exactly as Apple provides it),
+   then the availability line. JBSP-532 and JBSP-533 update the small line. */
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+
 .cta-note {
   display: inline-block;
   background: rgba(255,255,255,0.12);
@@ -78,11 +89,18 @@ p.lede {
   border-radius: 999px;
   padding: 0.6rem 1.3rem;
   font-size: 0.95rem;
-  margin-bottom: 3.5rem;
 }
-/* TODO (JBSP-167): once 3.0 is approved, replace .cta-note above with Apple's
-   official "Download on the App Store" badge, linked to the real App Store
-   listing URL. Get the badge asset from Apple's marketing resources page. */
+
+/* Apple asks for clear space around the badge of at least a quarter of its
+   height; the 1rem gaps above and below give that at 40px. */
+.store-badge { display: inline-block; line-height: 0; }
+.store-badge img { height: 40px; width: auto; display: block; }
+
+.cta-small {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgba(255,251,242,0.85);
+}
 
 .features {
   display: flex;
